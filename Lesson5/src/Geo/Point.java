@@ -10,8 +10,14 @@ public class Point {
     private double x;
     private double y;
 
+    /**
+     * 3) Измените в классе Point конструктор по умолчанию таким образом, чтобы начальные координаты точки при
+     её создании пользователь задавал с клавиатуры. (<= Условия задачи не очевидны)
+     */
+
     public Point() {
         while (true) {
+            System.out.println("Введите координату X:");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextDouble()) {
                 x = scanner.nextDouble();
@@ -22,6 +28,7 @@ public class Point {
         }
 
         while (true) {
+            System.out.println("Введите координату Y:");
             Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextDouble()) {
                 y = scanner.nextDouble();
@@ -34,7 +41,7 @@ public class Point {
 
     public Point(double x, double y) {
         this.x = x;
-        this.x = y;
+        this.y = y;
     }
 
     public void print() {
@@ -72,6 +79,53 @@ public class Point {
 
     public void setPoint(double x, double y) {
         this.x = x;
-        this.x = y;
+        this.y = y;
     }
+
+    /**
+     * 1) Создайте в классе Point метод, который будет выводить на экран сообщение о том, в какой координатной четверти лежит точка.
+     */
+    public void pointQuarter() {
+        if (x > 0 && y > 0) {
+            System.out.println("Точка находится в координатной четверти - I");
+        }
+        if (x < 0 && y < 0) {
+            System.out.println("Точка находится в координатной четверти - III");
+        }
+        if (x < 0 && y > 0) {
+            System.out.println("Точка находится в координатной четверти - II");
+        }
+        if (x > 0 && y < 0) {
+            System.out.println("Точка находится в координатной четверти - IV");
+        }
+    }
+
+    /**
+     * 2) Создайте в классе Point метод, проверяющий, являются ли две точки симметричными относительно начала отсчёта.
+     */
+
+    public boolean pointSymmetry(Point k) {
+        if (this.x + k.x == 0 && this.y + k.y == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 4) Создайте в классе Point метод, проверяющий, являются ли три точки коллинеарными (т.е. лежащими на одной прямой).
+     * Площадь = 1 / 2 ((x1 y2 + x2 y3 + x3 y1) — ( x2 y1 + x3 y2 + x1 y3))
+     */
+
+    public boolean collinearPoints(Point point1, Point point2){
+        double square = ((point1.x * point2.y + point2.x * this.y + this.x * point1.y) - (point2.x * point1.y + this.x * point2.y + point1.x * this.y));
+        if (square == 0) {
+            System.out.println(point1.toString() + point2.toString() + this.toString() + "Точки являются коллинеарными.");
+            return true;
+        } else {
+            System.out.println(point1.toString() + point2.toString() + this.toString() + " не являются коллинеарными.");
+            return false;
+        }
+    }
+
 }
