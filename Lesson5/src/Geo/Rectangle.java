@@ -8,8 +8,8 @@ public class Rectangle extends Shape {
     private Point start;
     private Point end;
 
-    public Rectangle(Point center, Point start, Point end) {
-        super(center);
+    public Rectangle(Point start, Point end) {
+        super(start);
         this.start = start;
         this.end = end;
     }
