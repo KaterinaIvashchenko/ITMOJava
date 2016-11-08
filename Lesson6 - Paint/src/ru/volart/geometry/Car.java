@@ -29,10 +29,10 @@ public class Car implements Shape {
         Rectangle window = new Rectangle(wS, wE);
         shapes.add(window);
 
-        Circle wheel1 = new Circle(new Point(bS.getX(), bE.getY()), 30);
-        Circle whheel2 = new Circle(bE, RADIUS);
+        Circle wheel1 = new Circle(new Point(bS.getX(), bE.getY()), RADIUS);
+        Circle wheel2 = new Circle(new Point(150 - RADIUS, 190), RADIUS);
         shapes.add(wheel1);
-        shapes.add(whheel2);
+        shapes.add(wheel2);
     }
 
     @Override
