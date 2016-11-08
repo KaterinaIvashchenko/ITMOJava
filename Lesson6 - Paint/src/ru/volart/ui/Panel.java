@@ -22,12 +22,11 @@ public class Panel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        if(shape != null){
+        if (shape != null) {
             shape.paint(g);
         }
 
     }
-
 
     public void setShape(Shape shape) {
         this.shape = shape;

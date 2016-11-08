@@ -14,7 +14,7 @@ public class Rectangle implements Shape {
 
     @Override
     public void paint(Graphics g) {
-        g.setColor(Color.green);
+        g.setColor(Color.blue);
         g.drawRect(start.getX(), start.getY(), Math.abs(end.getX() - start.getX()), Math.abs(end.getY() - start.getY()));
         start.paint(g);
         end.paint(g);

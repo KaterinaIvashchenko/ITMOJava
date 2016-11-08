@@ -14,7 +14,7 @@ public class Circle implements Shape {
 
     @Override
     public void paint(Graphics g) {
-        g.setColor(new Color(0, 0, 0));
+        g.setColor(new Color(0, 0, 255));
         g.drawOval(center.getX(), center.getY(), r, r);
     }
 }
