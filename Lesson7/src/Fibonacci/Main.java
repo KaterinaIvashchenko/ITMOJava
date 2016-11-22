@@ -1,4 +1,4 @@
-package Fib;
+package Fibonacci;
 
 /**
  * Рекурсия
