@@ -15,7 +15,7 @@ public class Main {
         Product[] products = new Product[3];
 
         products[0] = new Product("Milk", 48.65, 10);
-        products[1] = new Product("Coffe", 148.65, 2);
+        products[1] = new Product("Coffee", 148.65, 2);
         products[2] = new Product("Milk", 12.50, 140);
 
         for (Product p : products) {
