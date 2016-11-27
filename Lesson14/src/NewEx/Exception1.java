@@ -1,6 +1,6 @@
 package NewEx;
 
-
+//
 public class Exception1 extends Exception {
     private double amount;
 

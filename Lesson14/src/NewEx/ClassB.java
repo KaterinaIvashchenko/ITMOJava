@@ -1,6 +1,6 @@
 package NewEx;
 
-
+//
 public class ClassB extends ClassA {
 
     @Override
