@@ -1,6 +1,5 @@
 package Programm;
 
-
 public class InsuffcientFundsException extends Exception {
     private double amount;
 
