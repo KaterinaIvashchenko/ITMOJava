@@ -7,8 +7,10 @@ package Singleton;
 public class Main {
 
     public static void main(String[] args) {
+       Configuration number1 = Configuration.getInstance();
+       number1.print();
 
-       Configuration chislo = Configuration.getInstance();
-       chislo.print();
+       Configuration number2 = Configuration.getInstance();
+       number2.print();
     }
 }
