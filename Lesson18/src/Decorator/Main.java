@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        String fileName = "/Users/katerina/Documents/ITMOJava/Lesson11/TextWP/wp.txt";
+        String fileName = "/Users/katerina/.../wp.txt";
 
         FileInputStream fIn = new FileInputStream(fileName);
         FileOutputStream fout = new FileOutputStream(fileName + ".katya");

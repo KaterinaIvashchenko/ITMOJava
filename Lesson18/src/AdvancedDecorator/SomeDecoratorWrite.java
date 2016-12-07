@@ -27,15 +27,9 @@ public class SomeDecoratorWrite extends FilterOutputStream {
         out.write(resultWrite);
     }
 
-    /*@Override
-    public void write(byte[] b) throws IOException {
-        writeBytes += b.length;
-        out.write(b);
-    }*/
-
     @Override
     public void write(byte[] b, int off, int len) throws IOException {
-        for (int i = off; i < len; i++) {
+        for (int i = off; i < len + off; i++) {
             b[i] ^= key;
         }
         writeBytes += len;

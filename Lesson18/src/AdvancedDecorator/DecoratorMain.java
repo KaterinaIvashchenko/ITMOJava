@@ -9,7 +9,7 @@ import java.io.*;
 public class DecoratorMain {
     public static void main(String[] args) throws IOException {
 
-        String fileName = "/Users/katerina/Documents/ITMOJava/Lesson11/TextWP/wp_cut.txt";
+        String fileName = "/Users/katerina/.../wp_cut.txt";
 
         InputStream in = new FileInputStream(fileName);
 
@@ -24,8 +24,7 @@ public class DecoratorMain {
             superOut.write(b);
         }
 
-
-        SomeDecoratorRead superIn = new SomeDecoratorRead(new FileInputStream(fileName));
+        SomeDecoratorRead superIn = new SomeDecoratorRead(new FileInputStream(fileName + ".crypted"));
 
         OutputStream out = new FileOutputStream(fileName + ".decrypted");
 
@@ -39,11 +38,9 @@ public class DecoratorMain {
         }
 
         out.close();
+        in.close();
         superOut.close();
         superIn.close();
-        in.close();
-
-        /*System.out.println(in.getReadBytes());*/
-        /*System.out.println(superOut.getWriteBytes());*/
     }
 }
+
