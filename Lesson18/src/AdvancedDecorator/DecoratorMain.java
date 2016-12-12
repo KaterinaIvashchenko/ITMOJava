@@ -9,7 +9,7 @@ import java.io.*;
 public class DecoratorMain {
     public static void main(String[] args) throws IOException {
 
-        String fileName = "/Users/katerina/.../wp_cut.txt";
+        String fileName = "/Users/katerina/Documents/ITMOJava/Lesson11/TextWP/wp_cut.txt";
 
         InputStream in = new FileInputStream(fileName);
 
@@ -43,4 +43,3 @@ public class DecoratorMain {
         superIn.close();
     }
 }
-
