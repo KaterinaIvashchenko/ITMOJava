@@ -6,7 +6,7 @@ package Singleton;
 public class Configuration {
 
     private static Configuration instance;
-    private static double sout;
+    private double sout;
 
     private Configuration() {
         sout = Math.random();
