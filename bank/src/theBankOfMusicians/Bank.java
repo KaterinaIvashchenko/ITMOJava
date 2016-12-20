@@ -36,8 +36,8 @@ public class Bank {
                     theAccount1.setBalance(theAccount1.getBalance() - amount);
                     theAccount2.setBalance(theAccount2.getBalance() + amount);
                     queue.add(Thread.currentThread().getName() + " - Produced the transfer of funds from account of " + theAccount1.getName() + " to account " +
-                            theAccount2.getName() + " in the amount of " + amount + ". New balance of accounts: " + theAccount1.getName() + " - " + theAccount1.getBalance() +
-                            ", " + theAccount2.getName() + " - " + theAccount2.getBalance());
+                            theAccount2.getName() + " in the amount of " + amount + "$" + ". New balance of accounts: " + theAccount1.getName() + " - " + theAccount1.getBalance() + "$" +
+                            ", " + theAccount2.getName() + " - " + theAccount2.getBalance() + "$");
                 }
             }
         }
